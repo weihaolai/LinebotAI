@@ -67,7 +67,7 @@ def callback():
         if not isinstance(event.message, TextMessage):
             continue
         
-        result = t.read(event.message.text)
+        result = t.chinese(event.message.text)
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=result)
