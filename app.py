@@ -17,6 +17,7 @@ import os
 import sys
 from argparse import ArgumentParser
 import phonetic as ph
+import test as t
 
 from flask import Flask, request, abort
 from linebot import (
