@@ -16,7 +16,7 @@ def read ( word ):
         chi = rows.find_all('td')[1].text
         ph  = rows.find('td', class_='ph').text
 
-        return(chi,"=>",ph)
+        return(chi+"=>"+ph)
 
     except:
         return('查無資料')
