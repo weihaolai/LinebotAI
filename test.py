@@ -17,7 +17,7 @@ def chinese(word):
 
         
         dic = [rad,num,chi,eng]
-        return()
+        return(rad)
 
     except:
         return('查無資料,請輸入一個字的國字')
