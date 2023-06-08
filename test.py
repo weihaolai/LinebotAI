@@ -21,7 +21,7 @@ def chinese(word):
         result = ""
         for x in dic:
             result += x + '\n'
-        print( result )
+        return( result )
 
     except:
-        print('查無資料,請輸入一個字的國字')
+        return('查無資料,請輸入一個字的國字')
