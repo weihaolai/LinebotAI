@@ -15,9 +15,9 @@ def chinese(word):
         chi = (dat[0].find_all('p'))[2].text
         eng = (dat[0].find_all('p'))[3].text
 
+        
         dic = [rad,num,chi,eng]
-        for x in dic:
-            print(x)
+        return(dic)
 
     except:
-        print('查無資料,請輸入一個字的國字')
+        return('查無資料,請輸入一個字的國字')
