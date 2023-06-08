@@ -8,16 +8,20 @@ def chinese(word):
     html = requests.get(url)
     bs = BeautifulSoup(html.text,'lxml')
 
-    try:
+    try:   
         dat = bs.find_all('div', class_='site-article-hanziinfo')
         rad = (dat[0].find_all('p'))[0].text[:-1]
         num = (dat[0].find_all('p'))[1].text[:-1]
         chi = (dat[0].find_all('p'))[2].text
         eng = (dat[0].find_all('p'))[3].text
 
+
         
-        dic = {rad,num}
-        return(dic)
+        dic = [rad,num,chi,eng]
+        result = ""
+        for x in dic:
+            result += x + '\n'
+        print( result )
 
     except:
-        return('查無資料,請輸入一個字的國字')
+        print('查無資料,請輸入一個字的國字')
